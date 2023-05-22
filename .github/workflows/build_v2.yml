@@ -21,10 +21,7 @@ jobs:
         with:
           jekyll_src: "./"
           target_branch: "build"
-          pre_build_commands:
-            - bundle update ffi
-            - git config --global http.version HTTP/1.1
-            - apt-get install -y git-lfs
+          pre_build_commands: 'bundle update ffi; git config --global http.version HTTP/1.1; apt-get install -y git-lfs'
 
       - name: Dump steps context
         env:
